@@ -1,4 +1,4 @@
-const { formatMessage, ArgumentType, BlockType, ProgramModeType, CommonPeripheral } = window.Scratch;
+const {formatMessage, ArgumentType, BlockType, ProgramModeType, CommonPeripheral} = window.Scratch;
 
 const PNPID_LIST = [
     // CH340
@@ -19,14 +19,54 @@ const DIVECE_OPT = {
 };
 
 const Pins = {
-    IO0: '0', IO1: '1', IO2: '2', IO3: '3', IO4: '4', IO5: '5',
-    IO6: '6', IO7: '7', IO8: '8', IO9: '9', IO10: '10', IO11: '11',
-    IO12: '12', IO13: '13', IO14: '14', IO15: '15', IO16: '16', IO17: '17',
-    IO18: '18', IO19: '19', IO20: '20', IO21: '21', IO22: '22', IO23: '23',
-    IO24: '24', IO25: '25', IO26: '26', IO27: '27', IO28: '28', IO29: '29',
-    IO30: '30', IO31: '31', IO32: '32', IO33: '33', IO34: '34', IO35: '35',
-    IO36: '36', IO37: '37', IO38: '38', IO39: '39', IO40: '40', IO41: '41',
-    IO42: '42', IO43: '43', IO44: '44', IO45: '45', IO46: '46', IO47: '47'
+    IO0: '0',
+    IO1: '1',
+    IO2: '2',
+    IO3: '3',
+    IO4: '4',
+    IO5: '5',
+    IO6: '6',
+    IO7: '7',
+    IO8: '8',
+    IO9: '9',
+    IO10: '10',
+    IO11: '11',
+    IO12: '12',
+    IO13: '13',
+    IO14: '14',
+    IO15: '15',
+    IO16: '16',
+    IO17: '17',
+    IO18: '18',
+    IO19: '19',
+    IO20: '20',
+    IO21: '21',
+    IO22: '22',
+    IO23: '23',
+    IO24: '24',
+    IO25: '25',
+    IO26: '26',
+    IO27: '27',
+    IO28: '28',
+    IO29: '29',
+    IO30: '30',
+    IO31: '31',
+    IO32: '32',
+    IO33: '33',
+    IO34: '34',
+    IO35: '35',
+    IO36: '36',
+    IO37: '37',
+    IO38: '38',
+    IO39: '39',
+    IO40: '40',
+    IO41: '41',
+    IO42: '42',
+    IO43: '43',
+    IO44: '44',
+    IO45: '45',
+    IO46: '46',
+    IO47: '47'
 };
 
 const Level = {
@@ -35,12 +75,20 @@ const Level = {
 };
 
 const SerialNo = {
-    Serial0: '0', Serial1: '1', Serial2: '2', Serial3: '3'
+    Serial0: '0',
+    Serial1: '1',
+    Serial2: '2',
+    Serial3: '3'
 };
 
 const Buadrate = {
-    B4800: '4800', B9600: '9600', B19200: '19200',
-    B38400: '38400', B57600: '57600', B76800: '76800', B115200: '115200'
+    B4800: '4800',
+    B9600: '9600',
+    B19200: '19200',
+    B38400: '38400',
+    B57600: '57600',
+    B76800: '76800',
+    B115200: '115200'
 };
 
 const Eol = {
@@ -82,28 +130,49 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get PINS_MENU () {
         return [
-            { text: 'IO0', value: Pins.IO0 }, { text: 'IO1', value: Pins.IO1 },
-            { text: 'IO2', value: Pins.IO2 }, { text: 'IO3', value: Pins.IO3 },
-            { text: 'IO4', value: Pins.IO4 }, { text: 'IO5', value: Pins.IO5 },
-            { text: 'IO6', value: Pins.IO6 }, { text: 'IO7', value: Pins.IO7 },
-            { text: 'IO8', value: Pins.IO8 }, { text: 'IO9', value: Pins.IO9 },
-            { text: 'IO10', value: Pins.IO10 }, { text: 'IO11', value: Pins.IO11 },
-            { text: 'IO12', value: Pins.IO12 }, { text: 'IO13', value: Pins.IO13 },
-            { text: 'IO14', value: Pins.IO14 }, { text: 'IO15', value: Pins.IO15 },
-            { text: 'IO16', value: Pins.IO16 }, { text: 'IO17', value: Pins.IO17 },
-            { text: 'IO18', value: Pins.IO18 }, { text: 'IO19', value: Pins.IO19 },
-            { text: 'IO20', value: Pins.IO20 }, { text: 'IO21', value: Pins.IO21 },
-            { text: 'IO22', value: Pins.IO22 }, { text: 'IO23', value: Pins.IO23 },
-            { text: 'IO24', value: Pins.IO24 }, { text: 'IO25', value: Pins.IO25 },
-            { text: 'IO26', value: Pins.IO26 }, { text: 'IO27', value: Pins.IO27 },
-            { text: 'IO28', value: Pins.IO28 }, { text: 'IO29', value: Pins.IO29 },
-            { text: 'IO30', value: Pins.IO30 }, { text: 'IO31', value: Pins.IO31 },
-            { text: 'IO32', value: Pins.IO32 }, { text: 'IO33', value: Pins.IO33 },
-            { text: 'IO34', value: Pins.IO34 }, { text: 'IO35', value: Pins.IO35 },
-            { text: 'IO36', value: Pins.IO36 }, { text: 'IO37', value: Pins.IO37 },
-            { text: 'IO38', value: Pins.IO38 }, { text: 'IO39', value: Pins.IO39 },
-            { text: 'IO40', value: Pins.IO40 }, { text: 'IO41', value: Pins.IO41 },
-            { text: 'IO42', value: Pins.IO42 }
+            {text: 'IO0', value: Pins.IO0},
+            {text: 'IO1', value: Pins.IO1},
+            {text: 'IO2', value: Pins.IO2},
+            {text: 'IO3', value: Pins.IO3},
+            {text: 'IO4', value: Pins.IO4},
+            {text: 'IO5', value: Pins.IO5},
+            {text: 'IO6', value: Pins.IO6},
+            {text: 'IO7', value: Pins.IO7},
+            {text: 'IO8', value: Pins.IO8},
+            {text: 'IO9', value: Pins.IO9},
+            {text: 'IO10', value: Pins.IO10},
+            {text: 'IO11', value: Pins.IO11},
+            {text: 'IO12', value: Pins.IO12},
+            {text: 'IO13', value: Pins.IO13},
+            {text: 'IO14', value: Pins.IO14},
+            {text: 'IO15', value: Pins.IO15},
+            {text: 'IO16', value: Pins.IO16},
+            {text: 'IO17', value: Pins.IO17},
+            {text: 'IO18', value: Pins.IO18},
+            {text: 'IO19', value: Pins.IO19},
+            {text: 'IO20', value: Pins.IO20},
+            {text: 'IO21', value: Pins.IO21},
+            {text: 'IO22', value: Pins.IO22},
+            {text: 'IO23', value: Pins.IO23},
+            {text: 'IO24', value: Pins.IO24},
+            {text: 'IO25', value: Pins.IO25},
+            {text: 'IO26', value: Pins.IO26},
+            {text: 'IO27', value: Pins.IO27},
+            {text: 'IO28', value: Pins.IO28},
+            {text: 'IO29', value: Pins.IO29},
+            {text: 'IO30', value: Pins.IO30},
+            {text: 'IO31', value: Pins.IO31},
+            {text: 'IO32', value: Pins.IO32},
+            {text: 'IO33', value: Pins.IO33},
+            {text: 'IO34', value: Pins.IO34},
+            {text: 'IO35', value: Pins.IO35},
+            {text: 'IO36', value: Pins.IO36},
+            {text: 'IO37', value: Pins.IO37},
+            {text: 'IO38', value: Pins.IO38},
+            {text: 'IO39', value: Pins.IO39},
+            {text: 'IO40', value: Pins.IO40},
+            {text: 'IO41', value: Pins.IO41},
+            {text: 'IO42', value: Pins.IO42}
         ];
     }
 
@@ -113,36 +182,113 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get MODE_MENU () {
         return [
-            { text: formatMessage({ id: 'arduinoK210MaixDock.modeMenu.input', default: 'input' }), value: Mode.Input },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.modeMenu.output', default: 'output' }), value: Mode.Output },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.modeMenu.inputPullup', default: 'input-pullup' }), value: Mode.InputPullup },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.modeMenu.inputPulldown', default: 'input-pulldown' }), value: Mode.InputPulldown }
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.modeMenu.input',
+                    default: 'input',
+                    description: 'label for input pin mode'
+                }),
+                value: Mode.Input
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.modeMenu.output',
+                    default: 'output',
+                    description: 'label for output pin mode'
+                }),
+                value: Mode.Output
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.modeMenu.inputPullup',
+                    default: 'input-pullup',
+                    description: 'label for input-pullup pin mode'
+                }),
+                value: Mode.InputPullup
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.modeMenu.inputPulldown',
+                    default: 'input-pulldown',
+                    description: 'label for input-pulldown pin mode'
+                }),
+                value: Mode.InputPulldown
+            }
         ];
     }
 
     get LEVEL_MENU () {
         return [
-            { text: formatMessage({ id: 'arduinoK210MaixDock.levelMenu.high', default: 'high' }), value: Level.High },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.levelMenu.low', default: 'low' }), value: Level.Low }
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.levelMenu.high',
+                    default: 'high',
+                    description: 'label for high level'
+                }),
+                value: Level.High
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.levelMenu.low',
+                    default: 'low',
+                    description: 'label for low level'
+                }),
+                value: Level.Low
+            }
         ];
     }
 
     get INTERRUP_MODE_MENU () {
         return [
-            { text: formatMessage({ id: 'arduinoK210MaixDock.InterrupModeMenu.risingEdge', default: 'rising edge' }), value: InterrupMode.Rising },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.InterrupModeMenu.fallingEdge', default: 'falling edge' }), value: InterrupMode.Falling },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.InterrupModeMenu.changeEdge', default: 'change edge' }), value: InterrupMode.Change },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.InterrupModeMenu.low', default: 'low level' }), value: InterrupMode.LowLevel },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.InterrupModeMenu.high', default: 'high level' }), value: InterrupMode.HighLevel }
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.InterrupModeMenu.risingEdge',
+                    default: 'rising edge',
+                    description: 'label for rising edge interrupt mode'
+                }),
+                value: InterrupMode.Rising
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.InterrupModeMenu.fallingEdge',
+                    default: 'falling edge',
+                    description: 'label for falling edge interrupt mode'
+                }),
+                value: InterrupMode.Falling
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.InterrupModeMenu.changeEdge',
+                    default: 'change edge',
+                    description: 'label for change edge interrupt mode'
+                }),
+                value: InterrupMode.Change
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.InterrupModeMenu.low',
+                    default: 'low level',
+                    description: 'label for low level interrupt mode'
+                }),
+                value: InterrupMode.LowLevel
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.InterrupModeMenu.high',
+                    default: 'high level',
+                    description: 'label for high level interrupt mode'
+                }),
+                value: InterrupMode.HighLevel
+            }
         ];
     }
 
     get SERIAL_NO_MENU () {
         return [
-            { text: '0', value: SerialNo.Serial0 },
-            { text: '1', value: SerialNo.Serial1 },
-            { text: '2', value: SerialNo.Serial2 },
-            { text: '3', value: SerialNo.Serial3 }
+            {text: '0', value: SerialNo.Serial0},
+            {text: '1', value: SerialNo.Serial1},
+            {text: '2', value: SerialNo.Serial2},
+            {text: '3', value: SerialNo.Serial3}
         ];
     }
 
@@ -156,28 +302,63 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get BAUDTATE_MENU () {
         return [
-            { text: '4800', value: Buadrate.B4800 },
-            { text: '9600', value: Buadrate.B9600 },
-            { text: '19200', value: Buadrate.B19200 },
-            { text: '38400', value: Buadrate.B38400 },
-            { text: '57600', value: Buadrate.B57600 },
-            { text: '76800', value: Buadrate.B76800 },
-            { text: '115200', value: Buadrate.B115200 }
+            {text: '4800', value: Buadrate.B4800},
+            {text: '9600', value: Buadrate.B9600},
+            {text: '19200', value: Buadrate.B19200},
+            {text: '38400', value: Buadrate.B38400},
+            {text: '57600', value: Buadrate.B57600},
+            {text: '76800', value: Buadrate.B76800},
+            {text: '115200', value: Buadrate.B115200}
         ];
     }
 
     get EOL_MENU () {
         return [
-            { text: formatMessage({ id: 'arduinoK210MaixDock.eolMenu.warp', default: 'warp' }), value: Eol.Warp },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.eolMenu.noWarp', default: 'no-warp' }), value: Eol.NoWarp }
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.eolMenu.warp',
+                    default: 'warp',
+                    description: 'label for warp print line'
+                }),
+                value: Eol.Warp
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.eolMenu.noWarp',
+                    default: 'no-warp',
+                    description: 'label for no warp print line'
+                }),
+                value: Eol.NoWarp
+            }
         ];
     }
 
     get DATA_TYPE_MENU () {
         return [
-            { text: formatMessage({ id: 'arduinoK210MaixDock.dataTypeMenu.integer', default: 'integer' }), value: DataType.Integer },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.dataTypeMenu.decimal', default: 'decimal' }), value: DataType.Decimal },
-            { text: formatMessage({ id: 'arduinoK210MaixDock.dataTypeMenu.string', default: 'string' }), value: DataType.String }
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.dataTypeMenu.integer',
+                    default: 'integer',
+                    description: 'label for integer type data'
+                }),
+                value: DataType.Integer
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.dataTypeMenu.decimal',
+                    default: 'decimal',
+                    description: 'label for decimal type data'
+                }),
+                value: DataType.Decimal
+            },
+            {
+                text: formatMessage({
+                    id: 'arduinoK210MaixDock.dataTypeMenu.string',
+                    default: 'string',
+                    description: 'label for string type data'
+                }),
+                value: DataType.String
+            }
         ];
     }
 
@@ -190,204 +371,456 @@ class OpenBlockArduinoK210MaixDockDevice {
         return [
             {
                 id: 'pin',
-                name: formatMessage({ id: 'arduinoK210MaixDock.category.pins', default: 'Pins' }),
+                name: formatMessage({
+                    id: 'arduinoK210MaixDock.category.pins',
+                    default: 'Pins',
+                    description: 'The name of the arduino K210 MaixDock device pin category'
+                }),
                 color1: '#4C97FF',
                 color2: '#3373CC',
                 color3: '#3373CC',
                 blocks: [
                     {
                         opcode: 'setPinMode',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.setPinMode', default: 'set pin [PIN] mode [MODE]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.setPinMode',
+                            default: 'set pin [PIN] mode [MODE]',
+                            description: 'arduinoK210MaixDock set pin mode'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN },
-                            MODE: { type: ArgumentType.STRING, menu: 'mode', defaultValue: Mode.Input }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            MODE: {
+                                type: ArgumentType.STRING,
+                                menu: 'mode',
+                                defaultValue: Mode.Input
+                            }
                         }
                     },
                     {
                         opcode: 'setDigitalOutput',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.setDigitalOutput', default: 'set digital pin [PIN] out [LEVEL]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.setDigitalOutput',
+                            default: 'set digital pin [PIN] out [LEVEL]',
+                            description: 'arduinoK210MaixDock set digital pin out'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN },
-                            LEVEL: { type: ArgumentType.STRING, menu: 'level', defaultValue: Level.High }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            LEVEL: {
+                                type: ArgumentType.STRING,
+                                menu: 'level',
+                                defaultValue: Level.High
+                            }
                         }
                     },
                     {
-                        opcode: 'k210SetPwmOutput',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.setPwmOutput', default: 'set pwm pin [PIN] out [OUT]' }),
+                        opcode: 'setPwmOutput',
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.setPwmOutput',
+                            default: 'set pwm pin [PIN] out [OUT]',
+                            description: 'arduinoK210MaixDock set pwm pin out'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN },
-                            OUT: { type: ArgumentType.UINT8_NUMBER, defaultValue: '255' }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            OUT: {
+                                type: ArgumentType.UINT8_NUMBER,
+                                defaultValue: '255'
+                            }
                         }
                     },
                     '---',
                     {
                         opcode: 'readDigitalPin',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.readDigitalPin', default: 'read digital pin [PIN]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.readDigitalPin',
+                            default: 'read digital pin [PIN]',
+                            description: 'arduinoK210MaixDock read digital pin'
+                        }),
                         blockType: BlockType.BOOLEAN,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            }
                         }
                     },
                     '---',
                     {
                         opcode: 'setServoOutput',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.setServoOutput', default: 'set servo pin [PIN] out [OUT]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.setServoOutput',
+                            default: 'set servo pin [PIN] out [OUT]',
+                            description: 'arduinoK210MaixDock set servo pin out'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN },
-                            OUT: { type: ArgumentType.HALF_ANGLE, defaultValue: '90' }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            OUT: {
+                                type: ArgumentType.HALF_ANGLE,
+                                defaultValue: '90'
+                            }
                         }
                     },
                     '---',
                     {
                         opcode: 'attachInterrupt',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.attachInterrupt', default: 'attach interrupt pin [PIN] mode [MODE] executes' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.attachInterrupt',
+                            default: 'attach interrupt pin [PIN] mode [MODE] executes',
+                            description: 'arduinoK210MaixDock attach interrupt'
+                        }),
                         blockType: BlockType.CONDITIONAL,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN },
-                            MODE: { type: ArgumentType.STRING, menu: 'interruptMode', defaultValue: InterrupMode.Rising }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            MODE: {
+                                type: ArgumentType.STRING,
+                                menu: 'interruptMode',
+                                defaultValue: InterrupMode.Rising
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'detachInterrupt',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.pins.detachInterrupt', default: 'detach interrupt pin [PIN]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.detachInterrupt',
+                            default: 'detach interrupt pin [PIN]',
+                            description: 'arduinoK210MaixDock detach interrupt'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_PIN }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
+                    },
+                    // Legacy aliases, kept for backward compatibility.
+                    {
+                        opcode: 'k210SetPwmOutput',
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.pins.setPwmOutput',
+                            default: 'set pwm pin [PIN] out [OUT]',
+                            description: 'arduinoK210MaixDock set pwm pin out'
+                        }),
+                        blockType: BlockType.COMMAND,
+                        arguments: {
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_PIN
+                            },
+                            OUT: {
+                                type: ArgumentType.UINT8_NUMBER,
+                                defaultValue: '255'
+                            }
+                        },
+                        hideFromPalette: true,
+                        func: 'setPwmOutput'
                     }
                 ],
                 menus: {
-                    pins: { items: this.PINS_MENU },
-                    mode: { items: this.MODE_MENU },
-                    level: { acceptReporters: true, items: this.LEVEL_MENU },
-                    interruptMode: { items: this.INTERRUP_MODE_MENU }
+                    pins: {items: this.PINS_MENU},
+                    mode: {items: this.MODE_MENU},
+                    level: {acceptReporters: true, items: this.LEVEL_MENU},
+                    interruptMode: {items: this.INTERRUP_MODE_MENU}
                 }
             },
             {
                 id: 'serial',
-                name: formatMessage({ id: 'arduinoK210MaixDock.category.serial', default: 'Serial' }),
+                name: formatMessage({
+                    id: 'arduinoK210MaixDock.category.serial',
+                    default: 'Serial',
+                    description: 'The name of the arduino K210 MaixDock device serial category'
+                }),
                 color1: '#9966FF',
                 color2: '#774DCB',
                 color3: '#774DCB',
                 blocks: [
                     {
-                        opcode: 'k210MultiSerialBegin',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.serial.multiSerialBegin', default: 'serial [NO] begin baudrate [BAUD] pin RX [RX_PIN] TX [TX_PIN]' }),
+                        opcode: 'multiSerialBegin',
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.serial.multiSerialBegin',
+                            default: 'serial [NO] begin baudrate [BAUD] pin RX [RX_PIN] TX [TX_PIN]',
+                            description: 'arduinoK210MaixDock multi serial begin'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            NO: { type: ArgumentType.NUMBER, menu: 'serialNo', defaultValue: SerialNo.Serial0 },
-                            BAUD: { type: ArgumentType.STRING, menu: 'baudrate', defaultValue: Buadrate.B115200 },
-                            RX_PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_SERIAL_RX_PIN },
-                            TX_PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: this.DEFAULT_SERIAL_TX_PIN }
+                            NO: {
+                                type: ArgumentType.NUMBER,
+                                menu: 'serialNo',
+                                defaultValue: SerialNo.Serial0
+                            },
+                            BAUD: {
+                                type: ArgumentType.STRING,
+                                menu: 'baudrate',
+                                defaultValue: Buadrate.B115200
+                            },
+                            RX_PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_SERIAL_RX_PIN
+                            },
+                            TX_PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_SERIAL_TX_PIN
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'multiSerialPrint',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.serial.multiSerialPrint', default: 'serial [NO] print [VALUE] [EOL]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.serial.multiSerialPrint',
+                            default: 'serial [NO] print [VALUE] [EOL]',
+                            description: 'arduinoK210MaixDock multi serial print'
+                        }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            NO: { type: ArgumentType.NUMBER, menu: 'serialNo', defaultValue: SerialNo.Serial0 },
-                            VALUE: { type: ArgumentType.STRING, defaultValue: 'Hello OpenBlock' },
-                            EOL: { type: ArgumentType.STRING, menu: 'eol', defaultValue: Eol.Warp }
+                            NO: {
+                                type: ArgumentType.NUMBER,
+                                menu: 'serialNo',
+                                defaultValue: SerialNo.Serial0
+                            },
+                            VALUE: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'Hello OpenBlock'
+                            },
+                            EOL: {
+                                type: ArgumentType.STRING,
+                                menu: 'eol',
+                                defaultValue: Eol.Warp
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'multiSerialAvailable',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.serial.multiSerialAvailable', default: 'serial [NO] available data length' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.serial.multiSerialAvailable',
+                            default: 'serial [NO] available data length',
+                            description: 'arduinoK210MaixDock multi serial available data length'
+                        }),
                         arguments: {
-                            NO: { type: ArgumentType.NUMBER, menu: 'serialNo', defaultValue: SerialNo.Serial0 }
+                            NO: {
+                                type: ArgumentType.NUMBER,
+                                menu: 'serialNo',
+                                defaultValue: SerialNo.Serial0
+                            }
                         },
                         blockType: BlockType.REPORTER,
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'multiSerialReadAByte',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.serial.multiSerialReadAByte', default: 'serial [NO] read a byte' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.serial.multiSerialReadAByte',
+                            default: 'serial [NO] read a byte',
+                            description: 'arduinoK210MaixDock multi serial read a byte'
+                        }),
                         arguments: {
-                            NO: { type: ArgumentType.NUMBER, menu: 'serialNo', defaultValue: SerialNo.Serial0 }
+                            NO: {
+                                type: ArgumentType.NUMBER,
+                                menu: 'serialNo',
+                                defaultValue: SerialNo.Serial0
+                            }
                         },
                         blockType: BlockType.REPORTER,
                         programMode: [ProgramModeType.UPLOAD]
+                    },
+                    // Legacy aliases, kept for backward compatibility.
+                    {
+                        opcode: 'k210MultiSerialBegin',
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.serial.multiSerialBegin',
+                            default: 'serial [NO] begin baudrate [BAUD] pin RX [RX_PIN] TX [TX_PIN]',
+                            description: 'arduinoK210MaixDock multi serial begin'
+                        }),
+                        blockType: BlockType.COMMAND,
+                        arguments: {
+                            NO: {
+                                type: ArgumentType.NUMBER,
+                                menu: 'serialNo',
+                                defaultValue: SerialNo.Serial0
+                            },
+                            BAUD: {
+                                type: ArgumentType.STRING,
+                                menu: 'baudrate',
+                                defaultValue: Buadrate.B115200
+                            },
+                            RX_PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_SERIAL_RX_PIN
+                            },
+                            TX_PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: this.DEFAULT_SERIAL_TX_PIN
+                            }
+                        },
+                        programMode: [ProgramModeType.UPLOAD],
+                        hideFromPalette: true,
+                        func: 'multiSerialBegin'
                     }
                 ],
                 menus: {
-                    baudrate: { items: this.BAUDTATE_MENU },
-                    serialNo: { items: this.SERIAL_NO_MENU },
-                    pins: { items: this.PINS_MENU },
-                    eol: { items: this.EOL_MENU }
+                    baudrate: {items: this.BAUDTATE_MENU},
+                    serialNo: {items: this.SERIAL_NO_MENU},
+                    pins: {items: this.PINS_MENU},
+                    eol: {items: this.EOL_MENU}
                 }
             },
             {
                 id: 'data',
-                name: formatMessage({ id: 'arduinoK210MaixDock.category.data', default: 'Data' }),
+                name: formatMessage({
+                    id: 'arduinoK210MaixDock.category.data',
+                    default: 'Data',
+                    description: 'The name of the arduino K210 MaixDock device data category'
+                }),
                 color1: '#CF63CF',
                 color2: '#C94FC9',
                 color3: '#BD42BD',
                 blocks: [
                     {
                         opcode: 'dataMap',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.data.dataMap', default: 'map [DATA] from ([ARG0], [ARG1]) to ([ARG2], [ARG3])' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.data.dataMap',
+                            default: 'map [DATA] from ([ARG0], [ARG1]) to ([ARG2], [ARG3])',
+                            description: 'arduinoK210MaixDock data map'
+                        }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            DATA: { type: ArgumentType.NUMBER, defaultValue: '50' },
-                            ARG0: { type: ArgumentType.NUMBER, defaultValue: '1' },
-                            ARG1: { type: ArgumentType.NUMBER, defaultValue: '100' },
-                            ARG2: { type: ArgumentType.NUMBER, defaultValue: '1' },
-                            ARG3: { type: ArgumentType.NUMBER, defaultValue: '1000' }
+                            DATA: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '50'
+                            },
+                            ARG0: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '1'
+                            },
+                            ARG1: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '100'
+                            },
+                            ARG2: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '1'
+                            },
+                            ARG3: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '1000'
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'dataConstrain',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.data.dataConstrain', default: 'constrain [DATA] between ([ARG0], [ARG1])' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.data.dataConstrain',
+                            default: 'constrain [DATA] between ([ARG0], [ARG1])',
+                            description: 'arduinoK210MaixDock data constrain'
+                        }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            DATA: { type: ArgumentType.NUMBER, defaultValue: '50' },
-                            ARG0: { type: ArgumentType.NUMBER, defaultValue: '1' },
-                            ARG1: { type: ArgumentType.NUMBER, defaultValue: '100' }
+                            DATA: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '50'
+                            },
+                            ARG0: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '1'
+                            },
+                            ARG1: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '100'
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     '---',
                     {
                         opcode: 'dataConvert',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.data.dataConvert', default: 'convert [DATA] to [TYPE]' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.data.dataConvert',
+                            default: 'convert [DATA] to [TYPE]',
+                            description: 'arduinoK210MaixDock data convert'
+                        }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            DATA: { type: ArgumentType.STRING, defaultValue: '123' },
-                            TYPE: { type: ArgumentType.STRING, menu: 'dataType', defaultValue: DataType.Integer }
+                            DATA: {
+                                type: ArgumentType.STRING,
+                                defaultValue: '123'
+                            },
+                            TYPE: {
+                                type: ArgumentType.STRING,
+                                menu: 'dataType',
+                                defaultValue: DataType.Integer
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'dataConvertASCIICharacter',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.data.dataConvertASCIICharacter', default: 'convert [DATA] to ASCII character' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.data.dataConvertASCIICharacter',
+                            default: 'convert [DATA] to ASCII character',
+                            description: 'arduinoK210MaixDock data convert ASCII character'
+                        }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            DATA: { type: ArgumentType.NUMBER, defaultValue: '97' }
+                            DATA: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '97'
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     },
                     {
                         opcode: 'dataConvertASCIINumber',
-                        text: formatMessage({ id: 'arduinoK210MaixDock.data.dataConvertASCIINumber', default: 'convert [DATA] to ASCII nubmer' }),
+                        text: formatMessage({
+                            id: 'arduinoK210MaixDock.data.dataConvertASCIINumber',
+                            default: 'convert [DATA] to ASCII nubmer',
+                            description: 'arduinoK210MaixDock data convert ASCII number'
+                        }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            DATA: { type: ArgumentType.STRING, defaultValue: 'a' }
+                            DATA: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'a'
+                            }
                         },
                         programMode: [ProgramModeType.UPLOAD]
                     }
                 ],
                 menus: {
-                    dataType: { items: this.DATA_TYPE_MENU }
+                    dataType: {items: this.DATA_TYPE_MENU}
                 }
             }
         ];
@@ -410,10 +843,6 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     readDigitalPin (args) {
         return this._peripheral.readDigitalPin(args.PIN);
-    }
-
-    readAnalogPin (args) {
-        return this._peripheral.readAnalogPin(args.PIN);
     }
 
     setServoOutput (args) {
