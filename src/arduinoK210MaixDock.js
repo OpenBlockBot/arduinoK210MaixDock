@@ -130,49 +130,178 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get PINS_MENU () {
         return [
-            {text: 'IO0', value: Pins.IO0},
-            {text: 'IO1', value: Pins.IO1},
-            {text: 'IO2', value: Pins.IO2},
-            {text: 'IO3', value: Pins.IO3},
-            {text: 'IO4', value: Pins.IO4},
-            {text: 'IO5', value: Pins.IO5},
-            {text: 'IO6', value: Pins.IO6},
-            {text: 'IO7', value: Pins.IO7},
-            {text: 'IO8', value: Pins.IO8},
-            {text: 'IO9', value: Pins.IO9},
-            {text: 'IO10', value: Pins.IO10},
-            {text: 'IO11', value: Pins.IO11},
-            {text: 'IO12', value: Pins.IO12},
-            {text: 'IO13', value: Pins.IO13},
-            {text: 'IO14', value: Pins.IO14},
-            {text: 'IO15', value: Pins.IO15},
-            {text: 'IO16', value: Pins.IO16},
-            {text: 'IO17', value: Pins.IO17},
-            {text: 'IO18', value: Pins.IO18},
-            {text: 'IO19', value: Pins.IO19},
-            {text: 'IO20', value: Pins.IO20},
-            {text: 'IO21', value: Pins.IO21},
-            {text: 'IO22', value: Pins.IO22},
-            {text: 'IO23', value: Pins.IO23},
-            {text: 'IO24', value: Pins.IO24},
-            {text: 'IO25', value: Pins.IO25},
-            {text: 'IO26', value: Pins.IO26},
-            {text: 'IO27', value: Pins.IO27},
-            {text: 'IO28', value: Pins.IO28},
-            {text: 'IO29', value: Pins.IO29},
-            {text: 'IO30', value: Pins.IO30},
-            {text: 'IO31', value: Pins.IO31},
-            {text: 'IO32', value: Pins.IO32},
-            {text: 'IO33', value: Pins.IO33},
-            {text: 'IO34', value: Pins.IO34},
-            {text: 'IO35', value: Pins.IO35},
-            {text: 'IO36', value: Pins.IO36},
-            {text: 'IO37', value: Pins.IO37},
-            {text: 'IO38', value: Pins.IO38},
-            {text: 'IO39', value: Pins.IO39},
-            {text: 'IO40', value: Pins.IO40},
-            {text: 'IO41', value: Pins.IO41},
-            {text: 'IO42', value: Pins.IO42}
+            {
+                text: 'IO0',
+                value: Pins.IO0
+            },
+            {
+                text: 'IO1',
+                value: Pins.IO1
+            },
+            {
+                text: 'IO2',
+                value: Pins.IO2
+            },
+            {
+                text: 'IO3',
+                value: Pins.IO3
+            },
+            {
+                text: 'IO4',
+                value: Pins.IO4
+            },
+            {
+                text: 'IO5',
+                value: Pins.IO5
+            },
+            {
+                text: 'IO6',
+                value: Pins.IO6
+            },
+            {
+                text: 'IO7',
+                value: Pins.IO7
+            },
+            {
+                text: 'IO8',
+                value: Pins.IO8
+            },
+            {
+                text: 'IO9',
+                value: Pins.IO9
+            },
+            {
+                text: 'IO10',
+                value: Pins.IO10
+            },
+            {
+                text: 'IO11',
+                value: Pins.IO11
+            },
+            {
+                text: 'IO12',
+                value: Pins.IO12
+            },
+            {
+                text: 'IO13',
+                value: Pins.IO13
+            },
+            {
+                text: 'IO14',
+                value: Pins.IO14
+            },
+            {
+                text: 'IO15',
+                value: Pins.IO15
+            },
+            {
+                text: 'IO16',
+                value: Pins.IO16
+            },
+            {
+                text: 'IO17',
+                value: Pins.IO17
+            },
+            {
+                text: 'IO18',
+                value: Pins.IO18
+            },
+            {
+                text: 'IO19',
+                value: Pins.IO19
+            },
+            {
+                text: 'IO20',
+                value: Pins.IO20
+            },
+            {
+                text: 'IO21',
+                value: Pins.IO21
+            },
+            {
+                text: 'IO22',
+                value: Pins.IO22
+            },
+            {
+                text: 'IO23',
+                value: Pins.IO23
+            },
+            {
+                text: 'IO24',
+                value: Pins.IO24
+            },
+            {
+                text: 'IO25',
+                value: Pins.IO25
+            },
+            {
+                text: 'IO26',
+                value: Pins.IO26
+            },
+            {
+                text: 'IO27',
+                value: Pins.IO27
+            },
+            {
+                text: 'IO28',
+                value: Pins.IO28
+            },
+            {
+                text: 'IO29',
+                value: Pins.IO29
+            },
+            {
+                text: 'IO30',
+                value: Pins.IO30
+            },
+            {
+                text: 'IO31',
+                value: Pins.IO31
+            },
+            {
+                text: 'IO32',
+                value: Pins.IO32
+            },
+            {
+                text: 'IO33',
+                value: Pins.IO33
+            },
+            {
+                text: 'IO34',
+                value: Pins.IO34
+            },
+            {
+                text: 'IO35',
+                value: Pins.IO35
+            },
+            {
+                text: 'IO36',
+                value: Pins.IO36
+            },
+            {
+                text: 'IO37',
+                value: Pins.IO37
+            },
+            {
+                text: 'IO38',
+                value: Pins.IO38
+            },
+            {
+                text: 'IO39',
+                value: Pins.IO39
+            },
+            {
+                text: 'IO40',
+                value: Pins.IO40
+            },
+            {
+                text: 'IO41',
+                value: Pins.IO41
+            },
+            {
+                text: 'IO42',
+                value: Pins.IO42
+            }
         ];
     }
 
@@ -285,10 +414,22 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get SERIAL_NO_MENU () {
         return [
-            {text: '0', value: SerialNo.Serial0},
-            {text: '1', value: SerialNo.Serial1},
-            {text: '2', value: SerialNo.Serial2},
-            {text: '3', value: SerialNo.Serial3}
+            {
+                text: '0',
+                value: SerialNo.Serial0
+            },
+            {
+                text: '1',
+                value: SerialNo.Serial1
+            },
+            {
+                text: '2',
+                value: SerialNo.Serial2
+            },
+            {
+                text: '3',
+                value: SerialNo.Serial3
+            }
         ];
     }
 
@@ -302,13 +443,34 @@ class OpenBlockArduinoK210MaixDockDevice {
 
     get BAUDTATE_MENU () {
         return [
-            {text: '4800', value: Buadrate.B4800},
-            {text: '9600', value: Buadrate.B9600},
-            {text: '19200', value: Buadrate.B19200},
-            {text: '38400', value: Buadrate.B38400},
-            {text: '57600', value: Buadrate.B57600},
-            {text: '76800', value: Buadrate.B76800},
-            {text: '115200', value: Buadrate.B115200}
+            {
+                text: '4800',
+                value: Buadrate.B4800
+            },
+            {
+                text: '9600',
+                value: Buadrate.B9600
+            },
+            {
+                text: '19200',
+                value: Buadrate.B19200
+            },
+            {
+                text: '38400',
+                value: Buadrate.B38400
+            },
+            {
+                text: '57600',
+                value: Buadrate.B57600
+            },
+            {
+                text: '76800',
+                value: Buadrate.B76800
+            },
+            {
+                text: '115200',
+                value: Buadrate.B115200
+            }
         ];
     }
 
@@ -545,10 +707,19 @@ class OpenBlockArduinoK210MaixDockDevice {
                     }
                 ],
                 menus: {
-                    pins: {items: this.PINS_MENU},
-                    mode: {items: this.MODE_MENU},
-                    level: {acceptReporters: true, items: this.LEVEL_MENU},
-                    interruptMode: {items: this.INTERRUP_MODE_MENU}
+                    pins: {
+                        items: this.PINS_MENU
+                    },
+                    mode: {
+                        items: this.MODE_MENU
+                    },
+                    level: {
+                        acceptReporters: true,
+                        items: this.LEVEL_MENU
+                    },
+                    interruptMode: {
+                        items: this.INTERRUP_MODE_MENU
+                    }
                 }
             },
             {
@@ -691,10 +862,18 @@ class OpenBlockArduinoK210MaixDockDevice {
                     }
                 ],
                 menus: {
-                    baudrate: {items: this.BAUDTATE_MENU},
-                    serialNo: {items: this.SERIAL_NO_MENU},
-                    pins: {items: this.PINS_MENU},
-                    eol: {items: this.EOL_MENU}
+                    baudrate: {
+                        items: this.BAUDTATE_MENU
+                    },
+                    serialNo: {
+                        items: this.SERIAL_NO_MENU
+                    },
+                    pins: {
+                        items: this.PINS_MENU
+                    },
+                    eol: {
+                        items: this.EOL_MENU
+                    }
                 }
             },
             {
@@ -820,7 +999,9 @@ class OpenBlockArduinoK210MaixDockDevice {
                     }
                 ],
                 menus: {
-                    dataType: {items: this.DATA_TYPE_MENU}
+                    dataType: {
+                        items: this.DATA_TYPE_MENU
+                    }
                 }
             }
         ];
