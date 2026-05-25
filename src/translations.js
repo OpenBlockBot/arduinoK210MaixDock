@@ -18,16 +18,56 @@
 export default {
     'interface': {
         'en': {
-            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.'
+            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.',
+            'arduinoK210MaixDock.examples.blink.description': 'Make the on-board LED blink.',
+            'arduinoK210MaixDock.examples.blink.name': 'Blink',
+            'arduinoK210MaixDock.examples.button.description': 'Light up the LED while a push button is pressed.',
+            'arduinoK210MaixDock.examples.button.name': 'Button',
+            'arduinoK210MaixDock.examples.fade.description': 'Smoothly fade an LED in and out using PWM.',
+            'arduinoK210MaixDock.examples.fade.name': 'Fade',
+            'arduinoK210MaixDock.examples.serialMonitor.description': 'Print digital pin readings to the Serial Monitor every half second.',
+            'arduinoK210MaixDock.examples.serialMonitor.name': 'Serial Monitor',
+            'arduinoK210MaixDock.examples.servoSweep.description': 'Sweep a servo back and forth between 0 and 180 degrees.',
+            'arduinoK210MaixDock.examples.servoSweep.name': 'Servo Sweep'
         },
         'ru': {
-            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.'
+            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.',
+            'arduinoK210MaixDock.examples.blink.description': 'Make the on-board LED blink.',
+            'arduinoK210MaixDock.examples.blink.name': 'Blink',
+            'arduinoK210MaixDock.examples.button.description': 'Light up the LED while a push button is pressed.',
+            'arduinoK210MaixDock.examples.button.name': 'Button',
+            'arduinoK210MaixDock.examples.fade.description': 'Smoothly fade an LED in and out using PWM.',
+            'arduinoK210MaixDock.examples.fade.name': 'Fade',
+            'arduinoK210MaixDock.examples.serialMonitor.description': 'Print digital pin readings to the Serial Monitor every half second.',
+            'arduinoK210MaixDock.examples.serialMonitor.name': 'Serial Monitor',
+            'arduinoK210MaixDock.examples.servoSweep.description': 'Sweep a servo back and forth between 0 and 180 degrees.',
+            'arduinoK210MaixDock.examples.servoSweep.name': 'Servo Sweep'
         },
         'zh-cn': {
-            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.'
+            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.',
+            'arduinoK210MaixDock.examples.blink.description': 'Make the on-board LED blink.',
+            'arduinoK210MaixDock.examples.blink.name': 'Blink',
+            'arduinoK210MaixDock.examples.button.description': 'Light up the LED while a push button is pressed.',
+            'arduinoK210MaixDock.examples.button.name': 'Button',
+            'arduinoK210MaixDock.examples.fade.description': 'Smoothly fade an LED in and out using PWM.',
+            'arduinoK210MaixDock.examples.fade.name': 'Fade',
+            'arduinoK210MaixDock.examples.serialMonitor.description': 'Print digital pin readings to the Serial Monitor every half second.',
+            'arduinoK210MaixDock.examples.serialMonitor.name': 'Serial Monitor',
+            'arduinoK210MaixDock.examples.servoSweep.description': 'Sweep a servo back and forth between 0 and 180 degrees.',
+            'arduinoK210MaixDock.examples.servoSweep.name': 'Servo Sweep'
         },
         'zh-tw': {
-            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.'
+            'arduinoK210MaixDock.description': 'A control board based on the K210 RISC-V chip that only has basic functions and leads out all IO pins.',
+            'arduinoK210MaixDock.examples.blink.description': 'Make the on-board LED blink.',
+            'arduinoK210MaixDock.examples.blink.name': 'Blink',
+            'arduinoK210MaixDock.examples.button.description': 'Light up the LED while a push button is pressed.',
+            'arduinoK210MaixDock.examples.button.name': 'Button',
+            'arduinoK210MaixDock.examples.fade.description': 'Smoothly fade an LED in and out using PWM.',
+            'arduinoK210MaixDock.examples.fade.name': 'Fade',
+            'arduinoK210MaixDock.examples.serialMonitor.description': 'Print digital pin readings to the Serial Monitor every half second.',
+            'arduinoK210MaixDock.examples.serialMonitor.name': 'Serial Monitor',
+            'arduinoK210MaixDock.examples.servoSweep.description': 'Sweep a servo back and forth between 0 and 180 degrees.',
+            'arduinoK210MaixDock.examples.servoSweep.name': 'Servo Sweep'
         }
     },
     'extensions': {
